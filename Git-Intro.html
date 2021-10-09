@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible">
+        <title>Git Intro</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Git-Intro.css">
+    </head>
+    <body>
+        <h1>Git Intro</h1>
+        <img id="img1" src="Git-Logo.png" alt="Git Logo">
+        <div>
+            <h3>Git</h3>
+            <p>Git is basically a tool for Version Control System (VCS). It is used to keep track of your project. It will keep track of all the changes you will make in your project. It is an open source project, developed by Linus Torvalds, the famous creator of the kernel of Linux operating system, in 2005. Initially, it was command line based and the commands were from Linux kernel. Due to its open source nature, its GUI interface has also developed. You can download git using this link <a href="https://git-scm.com/downloads">Git Download</a>. It is available for Windows, Linux and macOS.<br>
+            This page will show you how to use Git using command line interface (CLI).</p>
+        </div>
+        <div>
+            <h3>GitHub</h3>
+            <p>Git will save your projects in your local machine. If you want to store them online, you have to use a hosting service. There are many hosting services like GitHub, GitLab, BitBucket etc. For this tutorial, we will use the most famous, GitHub. You can even download public projects of other users from GitHub. GitHub also provides many other functionalities.
+            <img id="img2" src="GitHub-Logo.png" alt="GitHub Logo">
+            You can easily make an account on GitHub. Just go to the website <a href="https://www.github.com">www.github.com</a>, and make an account.</p>
+        </div>
+        <div>
+            <h3>Git Commands</h3>
+            <p>There are many commands in Git, but we will be using some basic commands like:
+                <ul>
+                    <li>git init</li>
+                    <li>git status</li>
+                    <li>git add</li>
+                    <li>git branch</li>
+                    <li>git remote</li>
+                    <li>git push</li>
+                    <li>git clone</li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <h3>Start Git</h3>
+            <p>I have a project folder named "Hello Friend" with a file named "Hello.txt".<br>
+            <img id="img3" src="P1.PNG" alt=""><br>
+            Now, I right click in this folder, and then on the option "Git Bash Here".<br>
+            <img id="img3" src="P2.PNG" alt=""><br>
+            It will open a git terminal.<br>
+            <img id="img3" src="P3.PNG" alt=""><br>
+            </p>
+        </div>
+        <div>
+            <h3>Git Init</h3>
+            <p>It is used to initialize git. In other words, it will create a git repository on your local machine.<br>
+            <img id="img3" src="P4.PNG" alt=""><br>
+            As you can see, a ".git" hidden folder has been created and there is that "(master)" written in the terminal. This shows that we are in an initialized folder.</p>
+        </div>
+        <div>
+            <h3>Git Status</h3>
+            <p>It is used to check the status of the local repository.<br>
+            <img id="img3" src="P5.PNG" alt=""><br>
+            As you can see, there are words like "branch" and "commit". Don't worry, we will learn about these words very soon.<br>
+            The output is saying that one file is untracked, which is the "Hello.txt" file. It is also saying that use some type of command to commit.</p>
+        </div>
+        <div>
+            <h3>Git Add</h3>
+            <p>It is used to add file(s) to the "Staging Area". The staging area is the area from where git starts to keep tracks of all the files in the folder. The files not included in staging area will not be tracked. Here, tracking means to keep tracks of all types of changes made to the files.<br>
+            <img id="img3" src="P6.PNG" alt=""><br>
+            You can add all the files by using "." or specific files.<br><br>
+            Now, if we again check the status, the output doesn't show "Untracked files" because all the files are in staging area. It is also showing the command to unstage files.<br>
+            <img id="img3" src="P7.PNG" alt=""><br>
+            Now, I am adding a line in my file "Hello.txt". As it is in staging area, it must show the change. To check status, we will type "git status".<br>
+            <img id="img3" src="P8.PNG" alt=""><br>
+            As you can see, it is showing that the file has been modified. Now, again type "git add ." to add this modified file to staging area, and check the status using "git status".<br>
+            <img id="img3" src="P9.PNG" alt=""></p>
+        </div>
+        <div>
+            <h3>Git Commit</h3>
+            <p>It is used to commit file(s). When you commit, it means that you are making a version of your project. It is like a restore point because you can come back to this point if you want. With the command, you also have to give a specific message related to that version. You can give message using "-m" switch.<br>
+            <img id="img3" src="P10.PNG" alt=""></p>
+        </div>
+        <div>
+            <h3>Git Branch</h3>
+            <img id="img2" src="Branches.png" alt="">
+            <p>There is a concept of branching in git. If you are making a project, and you have made some versions of it, a user can make a copy of your project at some version for itself to work on. It will make a branch. The changes on that branch will not affect the original project. If the user wants to merge his branch with original project, it will send a pull request to you. If you accept the request, the branch will be merged and the original project will be changed. At starting point, there is only one branch called "master" branch. In GitHub, it is now chnaged to "main" branch.<br>
+            If we want to upload our project to the GitHub, we have to change the name of our branch from "master" to "main".<br>
+            <img id="img3" src="P11.png" alt=""><br>
+            Now, you can see that "(master)" has been changed to "(main)".</p>
+        </div>
+        <div>
+            <h3>Git Remote</h3>
+            <p>This command is used to set the link, to where our project will be stored. The link will be of our remote repository on GitHub. For this, we first have to make a GitHub repository so that we can upload our project to that repository.<br>
+            To make a new repository, click on the "+" button at the top right corner and click on "New repository" option.<br>
+            <img id="img3" src="New-Repository.PNG" alt=""><br>
+            You have to set a unique name for repository. You have other options like Description, Acsess, README file etc.<br>
+            <img id="img3" src="New-Repository2.PNG" alt=""><br>
+            Click on "Create repository". A new repository will be created.<br>
+            <img id="img3" src="New-Repository3.PNG" alt=""><br>
+            Now, copy the link of your repository.<br>
+            <img id="img4" src="New-Repository4.PNG" alt=""><br>
+            Now, type the remote command and paste that link.<br>
+            <img id="img3" src="P12.PNG" alt=""></p>
+        </div>
+        <div>
+            <h3>Git Push</h3>
+            <p>This command is used to upload the project to your remote repository on GitHub. For the first time, a GUI window will popup and will ask for GitHub account password. For second time and onwards, it will not require password.<br>
+            <img id="img3" src="P13.PNG" alt=""><br>
+            Now, if you go to your GitHub repository, refresh the page, you will now see files which you made on your local machine. In my case, one file "Hello.txt" will show with the message "My 1st commit".<br>
+            <img id="img5" src="New-Repository5.PNG" alt=""><br>
+            You can explore other tabs and options given there.<br><br>
+            GitHub will now store all your files that you will push to your repository and will keep track of it.</p>
+        </div>
+        <div>
+            <h3>Git Clone</h3>
+            <p>This command is used to download someone's project from GitHub. It just makes a copy of other user's project on your local machine.<br>
+            Here is someone's repository naming "Operating-System"<br>
+            <img id="img3" src="Repository.PNG" alt=""><br>
+            Click on the "Code" button and copy the repository link.<br>
+            <img id="img3" src="Repository2.PNG" alt=""><br>
+            Now, in the terminal type the command and paste the link.<br>
+            <img id="img3" src="P14.PNG" alt=""><br>
+            You don't have to type any other command before this command. It is a single command process.<br>
+            <img id="img6" src="Repository3.PNG" alt=""><br></p>
+        </div>
+        <div>
+            <h3>Conclusion</h3>
+            <p>It might feel hectic for you at first because we are so attached to GUI. But with the passage of time, you will become comfortable with it. If you have any issue regarding installation of git or making account on GitHub or using commands, please seek help of Google and YouTube or ask the professionals.</p>
+        </div>
+    </body>
+</html>
